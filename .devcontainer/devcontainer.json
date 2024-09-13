@@ -1,0 +1,22 @@
+{
+	"name": "docker_pipenv",
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode":{
+			"settings": {
+				"python.locator": "js",
+				"python.defaultInterpreterPath": ".venv/bin/python",
+				"terminal.integrated.shell.linux": "/bin/bash",
+                "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+                "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+                "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf"
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"mhutchie.git-graph"
+			]
+		}
+	},
+	"postStartCommand": "bash ./.devcontainer/postStartCommand.sh"
+}
